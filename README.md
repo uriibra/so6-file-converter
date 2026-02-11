@@ -1,4 +1,4 @@
-The repository contains a single Python file, `read_so6.py`, which implements three core functions for handling SO6 files.
+The repository contains a single Python file, `read_so6.py`, which implements three core functions for handling SO6 flight traffic files to pandas for data analysis.
 
 ---
 
