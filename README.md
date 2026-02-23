@@ -75,7 +75,7 @@ All functions allow access to the **route information contained in the SO6 file*
 
 ---
 
-## Usage Example
+## Usage Example 1
 
 ```python
 from read_so6 import so6_to_df, so6_to_df_simple, so6_to_df_waypoints
@@ -84,11 +84,14 @@ from read_so6 import so6_to_df, so6_to_df_simple, so6_to_df_waypoints
 df_raw = so6_to_df("example.so6")
 
 # Group SO6 data by callsign
-df_simple = so6_to_df_simple("example.so6")
+df_simple = so6_to_df_simple("./route1/example.so6")
 
 # Extract cleaned waypoint-based routes (Recommended)
-df_waypoints = so6_to_df_waypoints("example.so6")
+df_waypoints = so6_to_df_waypoints("C:\Users\folder1\folder2\example.so6")
+```
+---
 
+## Usage Example 2
 
 ```python
 import read_so6
@@ -97,6 +100,7 @@ import read_so6
 df_raw = read_so6.so6_to_df("./route1/example.so6")
 
 # Group SO6 data by callsign
+```
 df_simple = read_so6.so6_to_df_simple("C:\Users\folder1\folder2\example.so6")
 
 # Extract cleaned waypoint-based routes (Recommended)
