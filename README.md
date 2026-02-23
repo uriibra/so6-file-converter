@@ -21,6 +21,8 @@ Reads a **raw SO6 file** and converts it into a structured data representation.
 **Description**
 - Parses the original SO6 file without altering its structure
 - Serves as a base reader for further processing steps
+- Redundadnt data, two waypoints in the same line of df
+- File readed as the initial structure, raw, no filters or changes.
 
 **Typical use cases**
 - Initial inspection of SO6 data  
@@ -69,6 +71,7 @@ All functions allow access to the **route information contained in the SO6 file*
 - Python 3.8 or newer
 - Pandas no specific version
 - No external dependencies (standard Python libraries only)
+- No redundant data
 
 ---
 
@@ -83,5 +86,18 @@ df_raw = so6_to_df("example.so6")
 # Group SO6 data by callsign
 df_simple = so6_to_df_simple("example.so6")
 
-# Extract cleaned waypoint-based routes
+# Extract cleaned waypoint-based routes (Recommended)
 df_waypoints = so6_to_df_waypoints("example.so6")
+
+
+```python
+import read_so6
+
+# Read raw SO6 file
+df_raw = read_so6.so6_to_df("./route1/example.so6")
+
+# Group SO6 data by callsign
+df_simple = read_so6.so6_to_df_simple("C:\Users\folder1\folder2\example.so6")
+
+# Extract cleaned waypoint-based routes (Recommended)
+df_waypoints = read_so6.so6_to_df_waypoints("example.so6")
