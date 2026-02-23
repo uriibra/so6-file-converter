@@ -87,7 +87,7 @@ df_raw = so6_to_df("example.so6")
 df_simple = so6_to_df_simple("./route1/example.so6")
 
 # Extract cleaned waypoint-based routes
-df_waypoints = so6_to_df_waypoints("C:\Users\folder1\folder2\example.so6")
+df_waypoints = so6_to_df_waypoints(r"C:\Users\folder1\folder2\example.so6")
 ```
 ---
 
@@ -100,7 +100,7 @@ import read_so6
 df_raw = read_so6.so6_to_df("./route1/example.so6")
 
 # Group SO6 data by callsign
-df_simple = read_so6.so6_to_df_simple("C:\Users\folder1\folder2\example.so6")
+df_simple = read_so6.so6_to_df_simple(r"C:\Users\folder1\folder2\example.so6")
 
 # Extract cleaned waypoint-based routes
 df_waypoints = read_so6.so6_to_df_waypoints("example.so6")
